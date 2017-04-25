@@ -1,31 +1,18 @@
 
 
-var productIds = ['#w1', "#w2", "#o1"];
 
-var productInformations = ["Brokuł", "Marchew", "Banan" ];
+
 
 $(document).ready(function(){
-
-  for (var i = 0; i <= productIds.length -1; i++) {
-    $(productIds[i]).click(function() {
-    $("#product").replaceWith($("#product").text(productInformations[i]));
-  })
-  }
+  $("#w1").click(function() {
+  $("#product").replaceWith($("#product").text("Brokuł - 34 kcal"));
 });
-
-
-
-/*
-$(document).ready(function(){
- // $("#w1").click(function() {
-  //$("#product").replaceWith($("#product").text("Brokuł - 34 kcal"));
-//});
-  //$("#w2").click(function() {
-  //$("#product").replaceWith($("#product").text("Marchew - 41 kcal"));
-//});
-  //$("#o1").click(function() {
-  //$("#product").replaceWith($("#product").text("Banan - 89 kcal"));
-//});
+  $("#w2").click(function() {
+  $("#product").replaceWith($("#product").text("Marchew - 41 kcal"));
+});
+  $("#o1").click(function() {
+  $("#product").replaceWith($("#product").text("Banan - 89 kcal"));
+});
   $("#o2").click(function() {
   $("#product").replaceWith($("#product").text("Marchew - 53 kcal"));
 });
@@ -71,20 +58,8 @@ $("#addProduct").click(function(){
     ++clicks;
 });
 });
-*/
-//var clicks = 0;
-//$("#addProduct").click(function(){
-//    if(clicks == 0){
-//    	$("#productResult").text($("#product").text() + " - " + $("#product").val()* $("#ilość2").val()/100 + " kcal");
-//    }else{
-//        $("#productResult2").text($("#product").text() + " - " + $("#product").val()* $("#ilość2").val()/100 + " kcal");
-//    }
-//    ++clicks;
 
 
-
-//  $("#addProduct").click(function() {
-//  	$("#productResult").text($("#product").text() + " - " + $("#product").val()* $("#ilość2").val()/100 + " kcal");
 /*
 var = caloriesTable = {
   "vegetables" : {

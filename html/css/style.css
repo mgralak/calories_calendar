@@ -1,3 +1,7 @@
+html{
+	background-color: grey !important;
+}
+
 #home {
 	padding-top: 30px;
 }

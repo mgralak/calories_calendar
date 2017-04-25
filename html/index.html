@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
+    <script type="text/javascript" src="jquery2.1.4.min.js"></script>
+    <script type="text/javascript" src="site.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+    
+<body>
+
+<div class="container">
+  <h2>Kalkulator kalorii</h2>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Posiłki</a></li>
+    <li><a data-toggle="tab" href="#menu1">Spalanie</a></li>
+    <li><a data-toggle="tab" href="#menu2">Podsumowanie</a></li>
+  </ul>
+
+<div class="tab-content">
+
+    <div id="home" class="tab-pane fade in active">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+
+		<div class="btn-group">
+		  <button id="warzywa" type="button" class="btn btn-success">Warzywa</button>
+		  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+		    <span class="caret"></span>
+		  </button>
+		  <ul class="dropdown-menu" role="menu">
+		    <li><a id="w1" href="#">Brokuł</a></li>
+		    <li><a id="w2" href="#">Marchew</a></li>
+		  </ul>
+		</div>
+		<div class="btn-group">
+		  <button type="button" class="btn btn-success">Owoce</button>
+		  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+		    <span class="caret"></span>
+		  </button>
+		  <ul class="dropdown-menu" role="menu">
+		    <li><a id="o1" href="#">Banan</a></li>
+		    <li><a id="o2" href="#">Pomarańcza</a></li>
+		  </ul>
+		</div>
+		<div class="btn-group">
+		  <button type="button" class="btn btn-success">Nabiał</button>
+		  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+		    <span class="caret"></span>
+		  </button>
+		  <ul class="dropdown-menu" role="menu">
+		    <li><a id="n1" href="#">Jaja</a></li>
+		    <li><a id="n2" href="#">Twaróg</a></li>
+		  </ul>
+		</div>
+		<div class="btn-group">
+		  <button type="button" class="btn btn-success">Mięso</button>
+		  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+		    <span class="caret"></span>
+		  </button>
+		  <ul class="dropdown-menu" role="menu">
+		    <li><a id="m1" href="#">Pierś z kurczaka</a></li>
+		    <li><a id="m2" href="#">Wołowina</a></li>
+		  </ul>
+		</div>
+		<div class="btn-group">
+		  <button type="button" class="btn btn-success">Produkty zbożowe</button>
+		  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+		    <span class="caret"></span>
+		  </button>
+		  <ul class="dropdown-menu" role="menu">
+		    <li><a id="z1" href="#">Makaron</a></li>
+		    <li><a id="z2" value="389" href="#">Płatki owsiane</a></li>
+		  </ul>
+		</div>
+		<div class="btn-group">
+		  <button type="button" class="btn btn-success">Pozostałe</button>
+		  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+		    <span class="caret"></span>
+		  </button>
+		  <ul class="dropdown-menu" role="menu">
+		    <li><a id="p1" href="#">Czekolada mleczna</a></li>
+		    <li><a id="p2" href="#">Pepsi</a></li>
+		  </ul>
+		</div>
+
+		<button id="addProduct" type="button" class="btn btn-warning btn-lg pull-right">Dodaj produkt i oblicz kalorie</button>
+
+		<div id="product" class="d-block">Wybierz produkt</div>
+
+		<div id="ilość" class="form-group">
+ 			<label for="usr">Ilość [g]:</label>
+ 			<input id="ilość2" type="text" class="form-control bfh-number" value="0">
+		</div>
+
+		</div>
+
+	</div>
+
+	    <div class="panel panel-primary">
+	    	<div class="panel-body">
+
+	    		<div id="productResult2" class="d-block"></div>
+	    		<div id="productResult" class="d-block"></div>
+	    	</div>
+
+	    </div>
+	</div>
+
+    <div id="menu1" class="tab-pane fade">
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <div id="menu2" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+

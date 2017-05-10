@@ -45,7 +45,8 @@ $(document).ready(function(){
 });
   $("#p2").click(function() {
   $("#product").replaceWith($("#product").text("Pepsi"));
-  $("#product").replaceWith($("#product").val(37));
+  //$("#product").replaceWith($("#product").val(37));
+  caloriesSum = caloriesSum + 37;
 });
   $("#ilość").on('keypress', function(e){
   return e.metaKey ||
@@ -53,6 +54,9 @@ $(document).ready(function(){
     e.which == 8 ||
     /[0-9]/.test(String.fromCharCode(e.which));
 });
+
+var caloriesSum = 0;
+
   
 //var clicks = 0;
 //$("#addProduct").click(function(){
@@ -64,10 +68,59 @@ $(document).ready(function(){
 //    ++clicks;
 //});
 
+
+
 $("#addProduct").click(function(){
-	$("#productResult").prepend("<br />" + $("#product").text() + " - " + $("#product").val()* $("#ilość2").val()/100 + " kcal ");
-	$("#sum").text("Łączna ilość kalorii: " + ($("#sum").val() + $("#product").val()* $("#ilość2").val()/100 + " kcal"));
+ 
+  function countCalories (_calories, _grams) {
+    var result = _calories * _grams / 100 ;
+    caloriesSum = caloriesSum + result;
+    console.log(caloriesSum)
+    return result;
+  }
+
+  var caloriesPerItem = $("#product").val();
+  var itemAmount = $("#ilość2").val();
+  var prependedText = countCalories(caloriesPerItem, itemAmount) + ' kcal';
+  var resultSummary = 'Łączna ilość kalorii ' + caloriesSum;
+
+  $("#productResult").prepend("<br />" + $("#product").text() + " " + prependedText);
+	$("#sum").html(resultSummary);
 });
 
 
 });
+
+function Raccoon(name) {
+  this.intelligence = "very high";
+  this.name = name;
+  this.motto = function () {
+    console.log('screw dogs love raccoons');
+  }
+}
+
+var andrzej = new Raccoon('Andrzej');
+ //klasa
+function Vegetables() {
+  this.products = {
+    'sałata' : 25,
+    'marchew' : 27,
+    'por' : 15
+  }
+}
+// json
+products = {
+  vegetables {
+    'marchew' : 25,
+    'kapusta' : 27
+  },
+
+  meat {
+    'słonina' : 5000,
+    'boczek' : 25000
+  }
+
+}
+
+
+

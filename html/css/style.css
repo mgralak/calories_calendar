@@ -1,10 +1,20 @@
+body {
+    background-color: #cce6ff !important;
+}
+
+
 #home {
 	padding-top: 30px;
+	background-color: #cce6ff;
+}
+
+.panel-body {
+	background-color: #e6f2ff;
 }
 
 #product {
 	padding-top: 50px;
-	font-size: 30px;
+	font-size: 20px;
 }
 
 #ilość {
@@ -16,5 +26,19 @@
 }
 
 #productResult2 {
+	font-size: 20px;
+}
+
+#sum {
+	float: right;
+	margin-bottom: 20px;
+}
+
+#addMeal {
+	float: right; 
+	clear: right;
+}
+
+#mealResult {
 	font-size: 20px;
 }

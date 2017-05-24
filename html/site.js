@@ -68,10 +68,11 @@ var caloriesSum = 0;
 //    ++clicks;
 //});
 
-
+$("#products").hide();
 
 $("#addProduct").click(function(){
- 
+  $("#products").show();
+
   function countCalories (_calories, _grams) {
     var result = _calories * _grams / 100 ;
     caloriesSum = caloriesSum + result;
@@ -82,15 +83,29 @@ $("#addProduct").click(function(){
   var caloriesPerItem = $("#product").val();
   var itemAmount = $("#ilość2").val();
   var prependedText = countCalories(caloriesPerItem, itemAmount) + ' kcal';
-  var resultSummary = 'Łączna ilość kalorii ' + caloriesSum;
+  var resultSummary = 'Łączna ilość kalorii = ' + caloriesSum.toFixed(2);
 
-  $("#productResult").prepend("<br />" + $("#product").text() + " " + prependedText);
+
+
+  $("#productResult").prepend("<br />" + "- " + $("#product").text() + " " + prependedText);
 	$("#sum").html(resultSummary);
+
+});
+
+$("#meals").hide();
+
+$("#addMeal").click(function(){
+  $("#meals").show();
+  $("#mealResult").prepend("<br />" + "Posiłek = " + $("#sum").text());
+  $("#sum").text('Łączna ilość kalorii = ');
+  $("#productResult").text("");
+  $("#sum").val(null);
+  $('#productResult').html(null);
 });
 
 
 });
-
+/*
 function Raccoon(name) {
   this.intelligence = "very high";
   this.name = name;
@@ -121,6 +136,6 @@ products = {
   }
 
 }
-
+*/
 
 

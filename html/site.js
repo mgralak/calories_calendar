@@ -7,7 +7,7 @@ $(document).ready(function(){
     clickedValue = $(this).text();
     productsCalories = productList[0][clickedValue];
     console.log(clickedValue, productsCalories);
-    $("#product").html(`${clickedValue} ${productsCalories} kcal`);
+    $("#product").html(`${clickedValue}`);
   });
 
 $("#ilość").on('keypress', function(e){
@@ -22,36 +22,51 @@ var caloriesSum = 0;
 var productsCalories;
 var clickedValue;
 var totalCaloriesSum = 0;
+var resultSummaryMeals = 0;
+
 
 $("#products").hide();
 
 function countCalories (_calories, _grams) {
     var gramsToInt = parseInt(_grams);
     var caloriesToInt = parseInt(_calories);
-    var result =  caloriesToInt * gramsToInt;
+    var result =  caloriesToInt * gramsToInt / 100;
     totalCaloriesSum = totalCaloriesSum + result;
+    resultSummaryMeals = resultSummaryMeals + result;
     return result;
 }
 
 $("#addProduct").click(function(){
-  $("#products").show();
-  var gramsAmount = $("#grams_amount").val();
-  $("#productResult").prepend(`<br /> ${clickedValue} ${countCalories(productsCalories, gramsAmount)} kcal`);
-  var resultSummary = 'Łączna ilość kalorii = ' + totalCaloriesSum;
-  $("#sum").html(resultSummary);
+  if ($("#grams_amount").val() > 0) {
+    $("#products").show();
+    var gramsAmount = $("#grams_amount").val();
+    $("#productResult").prepend(`<br /> ${clickedValue} ${countCalories(productsCalories, gramsAmount)} kcal`);
+    var resultSummary = (totalCaloriesSum).toFixed(2);
+    $("#sum").html(`Wartość wszystkich produktów: <br /> ${resultSummary} kcal`);
+  }
 });
 
-
+var sumText = 0;
+var mealsCounter = 0;
 
 $("#meals").hide();
 
 $("#addMeal").click(function(){
+  $("mealsCounter").value = ++mealsCounter;
+  var sumText = $("#sum").text();
+  var sumTextCut = sumText.substr(30);
   $("#meals").show();
-  $("#mealResult").prepend("<br />" + "Posiłek = " + $("#sum").text());
-  $("#sum").text('Łączna ilość kalorii = ');
+    $('<div/>',{
+    text: `${mealsCounter}.Posiłek:  ${sumTextCut}`,
+    class: 'mealContainer'
+    }).prependTo('#panelMeals');
+  $("#sum").text("");
   $("#productResult").text("");
-  caloriesSum = 0;
   $('#productResult').html(null);
+  $("#products").hide();
+  var resultSummaryMealsRoundup = (resultSummaryMeals).toFixed(2);
+  $("#sumMeals").html(`Wartość wszystkich posiłków: <br /> ${resultSummaryMealsRoundup} kcal`);
+  totalCaloriesSum = 0;
 });
 
 
@@ -59,10 +74,25 @@ $("#addMeal").click(function(){
 
  
 var productList = [{
-    'Marchew' : 25,
-    'Brokuł' : 27,
-    'Banan' : 45,
-    'Pomarańcza' : 34,
+    'Brokuł' : 34,  
+    'Cebula' : 40,
+    'Cukinia' : 17,
+    'Fasola Szparagowa' : 31,
+    'Kalafior' : 25,
+    'Marchew' : 41,
+    'Papryka Czerwona' : 28,
+    'Pieczarki' : 22,
+    'Ziemniaki' : 77,
+
+    'Banan' : 89,
+    'Grejpfrut' : 42,
+    'Gruszka' : 58,
+    'Jabłko' : 57,
+    'Melon' : 33,
+    'Pomarańcza' : 53,
+    'Truskawki' : 32,
+    'Winogrona' : 69,
+
     'Jaja' : 54,
     'Twaróg' : 34,
     'Pierś z kurczaka' : 200,

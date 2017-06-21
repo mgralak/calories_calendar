@@ -6,6 +6,7 @@
     <title>Kalkulator</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Kurale' rel='stylesheet'>
     <script type="text/javascript" src="jquery2.1.4.min.js"></script>
     <script type="text/javascript" src="site.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -16,7 +17,7 @@
 <body>
 
 <div class="container">
-  <h2>Kalkulator kalorii</h2>
+  <h1>Kalkulator kalorii</h1>
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#home">Posiłki</a></li>
     <li><a data-toggle="tab" href="#menu1">Spalanie</a></li>
@@ -30,73 +31,86 @@
       <div class="panel-body">
 
 		<div class="btn-group">
-		  <button id="warzywa" type="button" class="btn btn-success">Warzywa</button>
+		  <button id="warzywa" type="button" class="btn btn-success buttonFont">Warzywa</button>
 		  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
 		    <span class="caret"></span>
 		  </button>
 		  <ul class="dropdown-menu" role="menu">
-		    <li><a id="w1" class="selector" >Brokuł</a></li>
-		    <li><a id="w2" class="selector" >Marchew</a></li>
+		  	<li><a class="selector" href="#">Brokuł</a></li>
+		    <li><a class="selector" href="#">Cebula</a></li>
+		    <li><a class="selector" href="#">Cukinia</a></li>
+		    <li><a class="selector" href="#">Fasola Szparagowa</a></li>
+		    <li><a class="selector" href="#">Kalafior</a></li>
+		    <li><a class="selector" href="#">Marchew</a></li>
+		    <li><a class="selector" href="#">Papryka Czerwona</a></li>
+		    <li><a class="selector" href="#">Pieczarki</a></li>
+		    <li><a class="selector" href="#">Ziemniaki</a></li>
 		  </ul>
 		</div>
 		<div class="btn-group">
-		  <button type="button" class="btn btn-success">Owoce</button>
+		  <button type="button" class="btn btn-success buttonFont">Owoce</button>
 		  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
 		    <span class="caret"></span>
 		  </button>
 		  <ul class="dropdown-menu" role="menu">
-		    <li><a id="o1" class="selector" >Banan</a></li>
-		    <li><a id="o2" class="selector">Pomarańcza</a></li>
+		    <li><a class="selector" href="#">Banan</a></li>
+		    <li><a class="selector" href="#">Grejpfrut</a></li>
+		    <li><a class="selector" href="#">Gruszka</a></li>
+		    <li><a class="selector" href="#">Jabłko</a></li>
+		    <li><a class="selector" href="#">Melon</a></li>
+		    <li><a class="selector" href="#">Pomarańcza</a></li>
+		    <li><a class="selector" href="#">Truskawki</a></li>
+		    <li><a class="selector" href="#">Winogrona</a></li>
 		  </ul>
 		</div>
 		<div class="btn-group">
-		  <button type="button" class="btn btn-success">Nabiał</button>
+		  <button type="button" class="btn btn-success buttonFont">Nabiał</button>
 		  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
 		    <span class="caret"></span>
 		  </button>
 		  <ul class="dropdown-menu" role="menu">
-		    <li><a id="n1" class="selector" >Jaja</a></li>
-		    <li><a id="n2" class="selector">Twaróg</a></li>
+		    <li><a class="selector" >Jaja</a></li>
+		    <li><a class="selector">Twaróg</a></li>
 		  </ul>
 		</div>
 		<div class="btn-group">
-		  <button type="button" class="btn btn-success">Mięso</button>
+		  <button type="button" class="btn btn-success buttonFont">Mięso</button>
 		  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
 		    <span class="caret"></span>
 		  </button>
 		  <ul class="dropdown-menu" role="menu">
-		    <li><a id="m1" class="selector" >Pierś z kurczaka</a></li>
-		    <li><a id="m2" class="selector" >Wołowina</a></li>
+		    <li><a class="selector" >Pierś z kurczaka</a></li>
+		    <li><a class="selector" >Wołowina</a></li>
 		  </ul>
 		</div>
 		<div class="btn-group">
-		  <button type="button" class="btn btn-success">Produkty zbożowe</button>
+		  <button type="button" class="btn btn-success buttonFont">Produkty zbożowe</button>
 		  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
 		    <span class="caret"></span>
 		  </button>
 		  <ul class="dropdown-menu" role="menu">
-		    <li><a id="z1" class="selector" >Makaron</a></li>
-		    <li><a id="z2"  class="selector" >Płatki owsiane</a></li>
+		    <li><a class="selector" >Makaron</a></li>
+		    <li><a class="selector" >Płatki owsiane</a></li>
 		  </ul>
 		</div>
 		<div class="btn-group">
-		  <button type="button" class="btn btn-success">Pozostałe</button>
+		  <button type="button" class="btn btn-success buttonFont">Pozostałe</button>
 		  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
 		    <span class="caret"></span>
 		  </button>
 		  <ul class="dropdown-menu" role="menu">
-		    <li><a id="p1" class="selector" >Czekolada mleczna</a></li>
-		    <li><a id="p2" class="selector" >Pepsi</a></li>
+		    <li><a class="selector" >Czekolada mleczna</a></li>
+		    <li><a class="selector" >Pepsi</a></li>
 		  </ul>
 		</div>
 
-		<button id="addProduct" type="button" class="btn btn-warning btn-lg pull-right">Dodaj produkt i oblicz kalorie</button>
+		<button id="addProduct" type="button" class="btn btn-warning btn-lg pull-right buttonFont">Dodaj produkt i oblicz kalorie</button>
 
-		<div id="product" class="d-block">Wybierz produkt</div>
+		<div id="product" class="d-block" disabled style="cursor:default;">Wybierz produkt</div>
 
 		<div id="ilość" class="form-group">
  			<label for="usr">Ilość [g]:</label>
- 			<input id="grams_amount" type="number" class="form-control bfh-number" value="0">
+ 			<input id="grams_amount" type="number" class="form-control bfh-number" value="0" min="0">
 		</div>
 
 		</div>
@@ -105,15 +119,16 @@
 
     <div id="products" class="panel panel-primary">    	
     	<div class="panel-body">
-	   		<button id="sum" class="btn btn-primary btn-lg pull-right" type="button" disabled style="cursor:default;">  </button>
-	   		<button id="addMeal" type="button" class="btn btn-warning btn-lg pull-right">Dodaj posiłek</button> 
-    		<div id="productResult" class="d-block"></div>
+	   		<button id="sum" class="btn btn-primary btn-lg pull-right buttonFont" type="button" disabled style="cursor:default;">  </button>
+	   		<button id="addMeal" type="button" class="btn btn-warning btn-lg pull-right buttonFont">Dodaj posiłek</button> 
+    		<div id="productResult" class="d-block" disabled style="cursor:default;"></div>
     	</div>
     </div>
 
     <div id="meals" class="panel panel-primary">
-    	<div class="panel-body">
-    		<div id="mealResult" class="d-block"></div>
+    	<div class="panel-body" >
+			<button id="sumMeals" class="btn btn-primary btn-lg pull-right buttonFont" type="button" disabled style="cursor:default;">  </button>
+    		<div id="panelMeals" class="d-block" disabled style="cursor:default;"></div>
     	</div>
     </div>
 

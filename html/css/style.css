@@ -1,11 +1,22 @@
 body {
     background-color: #cce6ff !important;
+    background-image: url("liscie.png");
 }
 
+h1 { color: #ffa31a !important; 
+	font-family: 'Kurale' !important;
+	font-size: 45px !important; 
+	line-height: 90px !important; 
+	font-weight: normal !important; 
+	margin-bottom: 0px !important; 
+	margin-top: 10px !important; 
+	text-align: center !important; 
+	text-shadow: 1px 1px 3px #000000 !important; 
+}
 
 #home {
 	padding-top: 30px;
-	background-color: #cce6ff;
+
 }
 
 .panel-body {
@@ -13,8 +24,27 @@ body {
 }
 
 #product {
-	padding-top: 50px;
+	margin-top: 20px;
 	font-size: 20px;
+	background-color:#7892c2;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	padding:22px 100px;
+	text-decoration:none;
+	text-shadow:1px 1px 4px #283966;
+}
+
+.buttonFont {
+	font-family:Arial;
+	text-decoration:none;
+	text-shadow:1px 1px 4px #283966;
 }
 
 #ilość {
@@ -22,7 +52,24 @@ body {
 }
 
 #productResult {
+	margin-top: 20px;
+	margin-left: 20px;
 	font-size: 20px;
+	background-color:#7892c2;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	padding-top: 0px !important;
+	padding-bottom: 25px !important;
+	padding:22px 20px;
+	text-decoration:none;
+	text-shadow:1px 1px 4px #283966;
 }
 
 #productResult2 {
@@ -39,6 +86,35 @@ body {
 	clear: right;
 }
 
+#meals {
+	background-color: #e6f2ff;
+}
+
 #mealResult {
 	font-size: 20px;
+}
+
+.mealContainer {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 500px;
+	font-size: 20px;
+	background-color:#7892c2;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	padding:20px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+	cursor:default;
+}
+
+#sumMeals {
+	float: right;
+	margin-bottom: 20px;
 }
